@@ -29,8 +29,9 @@
     // localStorage unavailable — fall back to system preference
   }
 
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+  // const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+  applyTheme(saved || 'light');
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', function () {
